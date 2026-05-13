@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: glosarium-app
+    runtime: node
+    envVars:
+      - key: SECURE_ENV
+        sync: false
+      - key: PORT
+        value: 10000
+      - key: SAFETY_PIN
+        sync: false
+      - key: POSTGRES_URL
+        sync: false 
+    buildCommand: bun run build && bun run migrate && rm -rf api ui
+    startCommand: bun run start

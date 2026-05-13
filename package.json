@@ -1,0 +1,9 @@
+{
+  "name": "glosarium-app",
+  "version": "2.0.0",
+  "scripts": {
+    "build": "bun build.js",
+    "start": "cd dist && bun index.js",
+    "migrate": "cd api && bun run db:migrate"
+  }
+}

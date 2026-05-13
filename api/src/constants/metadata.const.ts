@@ -1,0 +1,1 @@
+export const GLOSARIUM_VERSION = 'glosarium_version'
