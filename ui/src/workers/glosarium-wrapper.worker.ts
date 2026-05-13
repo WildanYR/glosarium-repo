@@ -37,7 +37,7 @@ export async function sqliteSyncDatabase() {
   }
 
   if (glosariumWorker && sqliteStatus === 'ready') {
-    const { version: versionStore } = useVersionStore()
+    const { version: versionStore } = useVersionStore.getState()
     const syncDate = versionStore === 'initial' ? undefined : versionStore
     sessionStorage.setItem(SYNC_STATUS, 'pending')
 

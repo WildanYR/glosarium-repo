@@ -13,4 +13,4 @@ services:
       - key: POSTGRES_URL
         sync: false 
     buildCommand: bun run build && bun run migrate && rm -rf api ui
-    startCommand: bun run start
+    startCommand: cd dist && bun index.js
