@@ -2,6 +2,7 @@ services:
   - type: web
     name: glosarium-app
     runtime: node
+    plan: free
     envVars:
       - key: SECURE_ENV
         sync: false
